@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h2>House Price Prediction System</h2>
+
+        <form method="POST">
+            <input type="number" name="OverallQual" placeholder="Overall Quality (1–10)" required>
+            <input type="number" name="GrLivArea" placeholder="Living Area (sq ft)" required>
+            <input type="number" name="TotalBsmtSF" placeholder="Basement Area (sq ft)" required>
+            <input type="number" name="GarageCars" placeholder="Garage Cars" required>
+            <input type="number" name="YearBuilt" placeholder="Year Built" required>
+            <input type="text" name="Neighborhood" placeholder="Neighborhood" required>
+
+            <button type="submit">Predict Price</button>
+        </form>
+
+        {% if prediction %}
+        <h3>Predicted Price: ${{ "{:,.2f}".format(prediction) }}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>

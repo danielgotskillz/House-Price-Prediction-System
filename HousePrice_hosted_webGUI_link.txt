@@ -1,0 +1,6 @@
+Name: Ogunyankin Daniel
+Matric No: 22CG031906
+Machine Learning Algorithm Used: Linear Regression
+Model Persistence Method Used: Joblib
+Live URL: 
+Github Repository Link: 
